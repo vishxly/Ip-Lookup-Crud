@@ -23,8 +23,8 @@ MONGODB_URI=your_mongodb_connection_string WEATHER_API_KEY=your_openweathermap_a
 
 ## Live Demo
 
-- Frontend: [Vercel App URL]
-- Backend API: [ App URL]
+- Frontend: [https://ip-lookup-crud-nplx.vercel.app/]
+- Backend API: [https://ip-lookup-crud.vercel.app/]
 
 ## GitHub Repository
 
