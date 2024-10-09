@@ -13,7 +13,7 @@ const formErrors = document.getElementById("formErrors");
 // Fetch and display users
 async function fetchUsers() {
   try {
-    const response = await fetch("http://localhost:3000/api/users");
+    const response = await fetch("https://ip-lookup-crud.vercel.app/api/users");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -126,7 +126,7 @@ userForm.addEventListener("submit", async (e) => {
     if (editingUserId) {
       // Update existing user
       response = await fetch(
-        `http://localhost:3000/api/users/${editingUserId}`,
+        `https://ip-lookup-crud.vercel.app/api/users/${editingUserId}`,
         {
           method: "PUT",
           headers: {
@@ -137,7 +137,7 @@ userForm.addEventListener("submit", async (e) => {
       );
     } else {
       // Create new user
-      response = await fetch("http://localhost:3000/api/users", {
+      response = await fetch("https://ip-lookup-crud.vercel.app/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -233,7 +233,7 @@ async function deleteUser(userId) {
   if (confirm("Are you sure you want to delete this user?")) {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/users/${userId}`,
+        `https://ip-lookup-crud.vercel.app/api/users/${userId}`,
         {
           method: "DELETE",
         }
